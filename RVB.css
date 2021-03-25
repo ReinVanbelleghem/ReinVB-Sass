@@ -5352,23 +5352,23 @@ body {
 }
 
 .b-red-200 {
-  background-color: #000 !important;
+  background-color: #e66063 !important;
 }
 
 .c-red-200 {
-  color: #000 !important;
+  color: #e66063 !important;
 }
 
 .border-red-200 {
-  border: 1px solid #000;
+  border: 1px solid #e66063;
 }
 
 .hover-b-red-200:hover {
-  background-color: #000 !important;
+  background-color: #e66063 !important;
 }
 
 .hover-c-red-200:hover {
-  color: #000 !important;
+  color: #e66063 !important;
 }
 
 .b-red-300 {
