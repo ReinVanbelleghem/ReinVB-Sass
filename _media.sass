@@ -1,0 +1,295 @@
+$xl-media: 1520px
+$l-media: 1220px
+$m-media: 1020px
+$s-media: 620px
+
+@media screen and (max-width: $xl-media)
+    .xl-t-center
+        text-align: center !important
+    .xl-t-left
+        text-align: left !important
+    .xl-t-right
+        text-align: right !important
+    .xl-t-justify
+        text-align: justify !important
+    .xl-t-bold
+        font-weight: bold !important
+    .xl-relative
+        position: relative
+    @for $i from 1 through $columns
+        .xl-col-#{$i}
+            flex: 0 0 100% / $columns * $i
+    @for $i from 1 through 100
+        .xl-w-#{$i}
+            width: percentage($i/100) !important
+        .xl-h-#{$i}
+            height: percentage($i/100) !important
+
+    @for $i from 0 through $p-max
+        .xl-p-#{$i}
+            padding: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .xl-pd-l-#{$i}
+            padding-left: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .xl-pd-r-#{$i}
+            padding-right: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .xl-pd-t-#{$i}
+            padding-top: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .xl-pd-b-#{$i}
+            padding-bottom: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .xl-pd-v-#{$i}
+            padding-top: #{$i*5}px !important
+            padding-bottom: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .xl-pd-h-#{$i}
+            padding-left: #{$i*5}px !important
+            padding-right: #{$i*5}px !important
+
+    @for $i from 0 through $p-max
+        .xl-mr-#{$i}
+            margin: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .xl-mr-l-#{$i}
+            margin-left: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .xl-mr-r-#{$i}
+            margin-right: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .xl-mr-t-#{$i}
+            margin-top: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .xl-mr-b-#{$i}
+            margin-bottom: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .xl-mr-v-#{$i}
+            margin-top: #{$i*5}px !important
+            margin-bottom: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .xl-mr-h-#{$i}
+            margin-left: #{$i*5}px !important
+            margin-right: #{$i*5}px !important
+    @for $i from 0 through $t-max
+        .xl-t-#{$i}
+            font-size: #{$i*2}px !important
+
+@media screen and (max-width: $l-media)
+    .l-t-center
+        text-align: center !important
+    .l-t-left
+        text-align: left !important
+    .l-t-right
+        text-align: right !important
+    .l-t-justify
+        text-align: justify !important
+    .l-t-bold
+        font-weight: bold !important
+    .l-relative
+        position: relative
+    @for $i from 1 through $columns
+        .l-col-#{$i}
+            flex: 0 0 100% / $columns * $i
+    @for $i from 1 through 100
+        .l-w-#{$i}
+            width: percentage($i/100) !important
+        .l-h-#{$i}
+            height: percentage($i/100) !important
+    @for $i from 0 through $p-max
+        .l-p-#{$i}
+            padding: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .l-pd-l-#{$i}
+            padding-left: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .l-pd-r-#{$i}
+            padding-right: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .l-pd-t-#{$i}
+            padding-top: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .l-pd-b-#{$i}
+            padding-bottom: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .l-pd-v-#{$i}
+            padding-top: #{$i*5}px !important
+            padding-bottom: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .l-pd-h-#{$i}
+            padding-left: #{$i*5}px !important
+            padding-right: #{$i*5}px !important
+
+    @for $i from 0 through $p-max
+        .l-mr-#{$i}
+            margin: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .l-mr-l-#{$i}
+            margin-left: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .l-mr-r-#{$i}
+            margin-right: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .l-mr-t-#{$i}
+            margin-top: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .l-mr-b-#{$i}
+            margin-bottom: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .l-mr-v-#{$i}
+            margin-top: #{$i*5}px !important
+            margin-bottom: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .l-mr-h-#{$i}
+            margin-left: #{$i*5}px !important
+            margin-right: #{$i*5}px !important
+
+    @for $i from 0 through $t-max
+        .l-t-#{$i}
+            font-size: #{$i*2}px !important
+
+@media screen and (max-width: $m-media)
+    .m-t-center
+        text-align: center !important
+    .m-t-left
+        text-align: left !important
+    .m-t-right
+        text-align: right !important
+    .m-t-justify
+        text-align: justify !important
+    .m-t-bold
+        font-weight: bold !important
+    .m-relative
+        position: relative
+    @for $i from 1 through $columns
+        .m-col-#{$i}
+            flex: 0 0 100% / $columns * $i
+    @for $i from 1 through 100
+        .m-w-#{$i}
+            width: percentage($i/100) !important
+        .m-h-#{$i}
+            height: percentage($i/100) !important
+
+    @for $i from 0 through $p-max
+        .m-p-#{$i}
+            padding: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .m-pd-l-#{$i}
+            padding-left: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .m-pd-r-#{$i}
+            padding-right: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .m-pd-t-#{$i}
+            padding-top: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .m-pd-b-#{$i}
+            padding-bottom: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .m-pd-v-#{$i}
+            padding-top: #{$i*5}px !important
+            padding-bottom: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .m-pd-h-#{$i}
+            padding-left: #{$i*5}px !important
+            padding-right: #{$i*5}px !important
+
+    @for $i from 0 through $p-max
+        .m-mr-#{$i}
+            margin: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .m-mr-l-#{$i}
+            margin-left: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .m-m-r-#{$i}
+            margin-right: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .m-mr-t-#{$i}
+            margin-top: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .m-mr-b-#{$i}
+            margin-bottom: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .m-mr-v-#{$i}
+            margin-top: #{$i*5}px !important
+            margin-bottom: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .m-mr-h-#{$i}
+            margin-left: #{$i*5}px !important
+            margin-right: #{$i*5}px !important
+    @for $i from 0 through $t-max
+        .m-t-#{$i}
+            font-size: #{$i*2}px !important
+
+@media screen and (max-width: $s-media)
+    .s-t-center
+        text-align: center !important
+    .s-t-left
+        text-align: left !important
+    .s-t-right
+        text-align: right !important
+    .s-t-justify
+        text-align: justify !important
+    .s-t-bold
+        font-weight: bold !important
+    .s-relative
+        position: relative
+    @for $i from 1 through $columns
+        .s-col-#{$i}
+            flex: 0 0 100% / $columns * $i
+    @for $i from 1 through 100
+        .s-w-#{$i}
+            width: percentage($i/100) !important
+        .s-h-#{$i}
+            height: percentage($i/100) !important
+    @for $i from 0 through $p-max
+        .s-p-#{$i}
+            padding: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .s-pd-l-#{$i}
+            padding-left: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .s-pd-r-#{$i}
+            padding-right: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .s-pd-t-#{$i}
+            padding-top: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .s-pd-b-#{$i}
+            padding-bottom: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .s-pd-v-#{$i}
+            padding-top: #{$i*5}px !important
+            padding-bottom: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .s-pd-h-#{$i}
+            padding-left: #{$i*5}px !important
+            padding-right: #{$i*5}px !important
+
+    @for $i from 0 through $p-max
+        .s-mr-#{$i}
+            margin: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .s-mr-l-#{$i}
+            margin-left: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .s-mr-r-#{$i}
+            margin-right: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .s-mr-t-#{$i}
+            margin-top: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .s-mr-b-#{$i}
+            margin-bottom: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .s-mr-v-#{$i}
+            margin-top: #{$i*5}px !important
+            margin-bottom: #{$i*5}px !important
+    @for $i from 0 through $p-max
+        .s-mr-h-#{$i}
+            margin-left: #{$i*5}px !important
+            margin-right: #{$i*5}px !important
+    @for $i from 0 through $t-max
+        .s-t-#{$i}
+            font-size: #{$i*2}px !important

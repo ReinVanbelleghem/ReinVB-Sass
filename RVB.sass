@@ -1,0 +1,136 @@
+@import settings
+@import grid
+@import pm
+@import fonts
+
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+body
+    font-family: sans-serif
+
+.box
+    box-shadow: 1px 1px 5px rgba(12, 12, 12, 0.1) !important
+    padding: 6px 16px
+    width: 100%
+    border-radius: 5px
+    background-color: white
+.button
+    box-sizing: border-box
+    text-decoration: none
+    border: none
+    border-radius: 4px
+    cursor: pointer
+    color: black
+    display: inline-block
+    -webkit-appearance: none
+.button:focus
+    outline: none
+.label
+    color: map-get($colors, gray)
+.text-input
+    margin: 10px 0px 25px 0px
+    width: 100%
+    padding: 8px 12px
+    border: 1px solid map-get($colors, gray-200)
+    border-radius: 5px
+    background-color: transparent
+    -webkit-appearance: none
+.text-input:focus
+    outline: none
+.h1, .h2
+    font-weight: 100
+.t-center
+    text-align: center !important
+.t-left
+    text-align: left !important
+.t-right
+    text-align: right !important
+.t-justify
+    text-align: justify !important
+.t-bold
+    font-weight: bold !important
+.image
+    width: 100%
+.border-none
+    border: none
+.card
+    width: 100%
+.card-image
+    width: 100%
+    border-radius: 5px 5px 0px 0px
+.card-bottom
+    margin-top: -4px
+    background: white
+    border-radius: 0px 0px 5px 5px
+    box-shadow: 1px 1px 5px rgba(12, 12, 12, 0.1) !important
+    padding: 16px 24px
+.code
+    white-space: nowrap
+.box-shadow
+    box-shadow: 1px 1px 5px rgba(12, 12, 12, 0.1) !important
+.box-shadow-none
+    box-shadow: none !important
+.text-block
+    line-height: 1.8em
+.fixed-top
+    position: fixed
+    top: 0
+.fixed-left
+    position: fixed
+    left: 0
+.fixed-right
+    position: fixed
+    right: 0
+.fixed-bottom
+    position: fixed
+    bottom: 0
+.relative
+    position: relative
+.absolute
+    position: absolute
+.link
+    text-decoration: none
+@for $i from 0 through $b-r-max
+    .border-r-#{$i}
+        border-radius: #{$i}px !important
+@for $i from 0 through 100
+    .opacity-#{$i}
+        opacity: #{$i}% !important
+.border-r-circle
+    border-radius: 50% !important
+@for $i from 0 through $t-max
+    .t-#{$i}
+        font-size: #{$i*2}px !important
+@for $i from 0 through 8
+    .fw-#{$i}
+        font-weight: #{$i*100} !important
+@for $i from 0 through $hover-max
+    .hover-#{$i}
+        transition: background-color #{$i*0.2}s ease, color #{$i*0.2}s ease
+.b-none
+    background: transparent !important
+.c-none
+    color: transparent !important
+@each $name, $color in $colors
+    .b-#{$name}
+        background-color: $color !important
+    .c-#{$name}
+        color: $color !important
+    .border-#{$name}
+        border: 1px solid $color
+    .hover-b-#{$name}:hover
+        background-color: $color !important
+    .hover-c-#{$name}:hover
+        color: $color !important
+@each $name, $size in $button_sizes
+    .button-#{$name}
+        padding: $size
+
+@each $name, $size in $button_text
+    .button-#{$name}
+        font-size: $size
+
+@import media
