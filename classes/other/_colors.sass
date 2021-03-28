@@ -1,0 +1,11 @@
+@each $name, $color in $colors
+    .b-#{$name}
+        background-color: $color !important
+    .c-#{$name}
+        color: $color !important
+    .border-#{$name}
+        border: 1px solid $color
+    .hover-b-#{$name}:hover
+        background-color: $color !important
+    .hover-c-#{$name}:hover
+        color: $color !important

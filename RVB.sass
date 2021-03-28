@@ -1,8 +1,8 @@
-@import settings
-@import grid
-@import pm
-@import fonts
-
+@import classes/settings
+@import classes/grid/grid
+@import classes/grid/pm
+@import classes/other/fonts
+@import classes/elements/cards
 *
     box-sizing: border-box
     margin: 0
@@ -15,7 +15,8 @@ body
     box-shadow: 1px 1px 5px rgba(12, 12, 12, 0.1) !important
     padding: 6px 16px
     width: 100%
-    border-radius: 5px
+
+    adius: 5px
     background-color: white
 .button
     box-sizing: border-box
@@ -42,31 +43,11 @@ body
     outline: none
 .h1, .h2
     font-weight: 100
-.t-center
-    text-align: center !important
-.t-left
-    text-align: left !important
-.t-right
-    text-align: right !important
-.t-justify
-    text-align: justify !important
-.t-bold
-    font-weight: bold !important
+@import classes/other/text
 .image
     width: 100%
 .border-none
     border: none
-.card
-    width: 100%
-.card-image
-    width: 100%
-    border-radius: 5px 5px 0px 0px
-.card-bottom
-    margin-top: -4px
-    background: white
-    border-radius: 0px 0px 5px 5px
-    box-shadow: 1px 1px 5px rgba(12, 12, 12, 0.1) !important
-    padding: 16px 24px
 .code
     white-space: nowrap
 .box-shadow
@@ -96,17 +77,22 @@ body
 @for $i from 0 through $b-r-max
     .border-r-#{$i}
         border-radius: #{$i}px !important
+    .border-r-l-#{$i}
+        border-radius: #{$i}px 0px 0px #{$i}px
+    .border-r-r-#{$i}
+        border-radius: 0px #{$i}px #{$i}px 0px
+    .border-r-t-#{$i}
+        border-radius: #{$i}px #{$i}px 0px 0px
+    .border-r-b-#{$i}
+        border-radius: 0px 0px #{$i}px #{$i}px
+@for $i from 0 through $border-thickness
+    .border-t-#{$i}
+        border-width: #{$i}px !important
 @for $i from 0 through 100
     .opacity-#{$i}
         opacity: #{$i}% !important
 .border-r-circle
     border-radius: 50% !important
-@for $i from 0 through $t-max
-    .t-#{$i}
-        font-size: #{$i*2}px !important
-@for $i from 0 through 8
-    .fw-#{$i}
-        font-weight: #{$i*100} !important
 @for $i from 0 through $hover-max
     .hover-#{$i}
         transition: background-color #{$i*0.2}s ease, color #{$i*0.2}s ease
@@ -114,17 +100,7 @@ body
     background: transparent !important
 .c-none
     color: transparent !important
-@each $name, $color in $colors
-    .b-#{$name}
-        background-color: $color !important
-    .c-#{$name}
-        color: $color !important
-    .border-#{$name}
-        border: 1px solid $color
-    .hover-b-#{$name}:hover
-        background-color: $color !important
-    .hover-c-#{$name}:hover
-        color: $color !important
+@import classes/other/colors
 @each $name, $size in $button_sizes
     .button-#{$name}
         padding: $size
@@ -133,4 +109,4 @@ body
     .button-#{$name}
         font-size: $size
 
-@import media
+@import classes/grid/media

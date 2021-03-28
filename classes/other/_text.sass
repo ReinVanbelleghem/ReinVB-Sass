@@ -1,0 +1,18 @@
+.t-center
+    text-align: center !important
+.t-left
+    text-align: left !important
+.t-right
+    text-align: right !important
+.t-justify
+    text-align: justify !important
+.t-bold
+    font-weight: bold !important
+.t-italic
+    font-style: bold !important
+@for $i from 0 through $t-max
+    .t-#{$i}
+        font-size: #{$i*2}px !important
+@for $i from 100 through 900
+    .fw-#{$i}
+        font-weight: #{$i} !important
