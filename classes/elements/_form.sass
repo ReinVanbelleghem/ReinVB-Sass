@@ -1,0 +1,30 @@
+.button
+    box-sizing: border-box
+    text-decoration: none
+    border: none
+    border-radius: 5px
+    cursor: pointer
+    color: black
+    display: inline-block
+    -webkit-appearance: none
+.button:focus
+    outline: none
+@each $name, $size in $button_sizes
+    .button-#{$name}
+        padding: $size
+
+@each $name, $size in $button_text
+    .button-#{$name}
+        font-size: $size
+.label
+    color: map-get($colors, gray-400)
+.text-input
+    margin: 10px 0px 25px 0px
+    width: 100%
+    padding: 8px 12px
+    border: 1px solid map-get($colors, gray-200)
+    border-radius: 5px
+    background-color: transparent
+    -webkit-appearance: none
+.text-input:focus
+    outline: none
