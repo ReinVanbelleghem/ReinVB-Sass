@@ -4039,6 +4039,10 @@
   width: 50%;
 }
 
+.link {
+  text-decoration: none;
+}
+
 .button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -4107,6 +4111,95 @@
 
 .text-input:focus {
   outline: none;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown > ul {
+  display: none;
+  background: white;
+  width: 200px;
+}
+
+.dropdown:hover > ul {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 5px rgba(12, 12, 12, 0.1) !important;
+          box-shadow: 1px 1px 5px rgba(12, 12, 12, 0.1) !important;
+}
+
+.dropdown ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  list-style: none;
+  padding: 15px;
+  text-align: left;
+}
+
+.dropdown ul li a {
+  text-decoration: none;
+  color: gray;
+}
+
+.toggle {
+  --width: 40px;
+  --height: calc(var(--width) / 2);
+  --border-radius: calc(var(--height) / 2);
+  display: inline-block;
+  cursor: pointer;
+}
+
+.toggle__input {
+  display: none;
+}
+
+.toggle__fill {
+  position: relative;
+  width: var(--width);
+  height: var(--height);
+  border-radius: var(--border-radius);
+  background: #dddddd;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+.toggle__fill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: var(--height);
+  width: var(--height);
+  background: #ffffff;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  border-radius: var(--border-radius);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.toggle__input:checked ~ .toggle__fill::after {
+  -webkit-transform: translateX(var(--height));
+          transform: translateX(var(--height));
+}
+
+.gradient-1 {
+  background: #050024;
+  background: linear-gradient(51deg, #050024 0%, #7bc5ff 0%, #e089ff 90%);
 }
 
 * {
@@ -9464,6 +9557,22 @@ body {
   border-radius: 50% !important;
 }
 
+.border-r-r-circle {
+  border-radius: 0 1000px 1000px 0 !important;
+}
+
+.border-r-l-circle {
+  border-radius: 1000px 0 0 1000px !important;
+}
+
+.border-r-t-circle {
+  border-radius: 1000px 1000px 0 0 !important;
+}
+
+.border-r-b-circle {
+  border-radius: 0 0 1000px 1000px !important;
+}
+
 .hover-0 {
   -webkit-transition: background-color 0s ease, color 0s ease;
   transition: background-color 0s ease, color 0s ease;
@@ -9597,6 +9706,10 @@ body {
   color: #F5F9FF !important;
 }
 
+.toggle__input:checked ~ .toggle-background {
+  background-color: #F5F9FF !important;
+}
+
 .b-paper {
   background-color: #f8f8f8 !important;
 }
@@ -9617,24 +9730,56 @@ body {
   color: #f8f8f8 !important;
 }
 
+.toggle__input:checked ~ .toggle-paper {
+  background-color: #f8f8f8 !important;
+}
+
+.b-back-blue {
+  background-color: #fafaff !important;
+}
+
+.c-back-blue {
+  color: #fafaff !important;
+}
+
+.border-back-blue {
+  border: 1px solid #fafaff;
+}
+
+.hover-b-back-blue:hover {
+  background-color: #fafaff !important;
+}
+
+.hover-c-back-blue:hover {
+  color: #fafaff !important;
+}
+
+.toggle__input:checked ~ .toggle-back-blue {
+  background-color: #fafaff !important;
+}
+
 .b-blue-200 {
-  background-color: #00ADFF !important;
+  background-color: #00adff !important;
 }
 
 .c-blue-200 {
-  color: #00ADFF !important;
+  color: #00adff !important;
 }
 
 .border-blue-200 {
-  border: 1px solid #00ADFF;
+  border: 1px solid #00adff;
 }
 
 .hover-b-blue-200:hover {
-  background-color: #00ADFF !important;
+  background-color: #00adff !important;
 }
 
 .hover-c-blue-200:hover {
-  color: #00ADFF !important;
+  color: #00adff !important;
+}
+
+.toggle__input:checked ~ .toggle-blue-200 {
+  background-color: #00adff !important;
 }
 
 .b-blue-400 {
@@ -9657,6 +9802,10 @@ body {
   color: #377DFF !important;
 }
 
+.toggle__input:checked ~ .toggle-blue-400 {
+  background-color: #377DFF !important;
+}
+
 .b-blue-700 {
   background-color: #3742fa !important;
 }
@@ -9675,6 +9824,34 @@ body {
 
 .hover-c-blue-700:hover {
   color: #3742fa !important;
+}
+
+.toggle__input:checked ~ .toggle-blue-700 {
+  background-color: #3742fa !important;
+}
+
+.b-blue-900 {
+  background-color: #010024 !important;
+}
+
+.c-blue-900 {
+  color: #010024 !important;
+}
+
+.border-blue-900 {
+  border: 1px solid #010024;
+}
+
+.hover-b-blue-900:hover {
+  background-color: #010024 !important;
+}
+
+.hover-c-blue-900:hover {
+  color: #010024 !important;
+}
+
+.toggle__input:checked ~ .toggle-blue-900 {
+  background-color: #010024 !important;
 }
 
 .b-yellow-200 {
@@ -9697,6 +9874,10 @@ body {
   color: #ffeaa7 !important;
 }
 
+.toggle__input:checked ~ .toggle-yellow-200 {
+  background-color: #ffeaa7 !important;
+}
+
 .b-yellow-400 {
   background-color: #feca57 !important;
 }
@@ -9715,6 +9896,10 @@ body {
 
 .hover-c-yellow-400:hover {
   color: #feca57 !important;
+}
+
+.toggle__input:checked ~ .toggle-yellow-400 {
+  background-color: #feca57 !important;
 }
 
 .b-yellow-700 {
@@ -9737,6 +9922,10 @@ body {
   color: #ff9f43 !important;
 }
 
+.toggle__input:checked ~ .toggle-yellow-700 {
+  background-color: #ff9f43 !important;
+}
+
 .b-green-200 {
   background-color: #55efc4 !important;
 }
@@ -9755,6 +9944,10 @@ body {
 
 .hover-c-green-200:hover {
   color: #55efc4 !important;
+}
+
+.toggle__input:checked ~ .toggle-green-200 {
+  background-color: #55efc4 !important;
 }
 
 .b-green-400 {
@@ -9777,6 +9970,10 @@ body {
   color: #2ed573 !important;
 }
 
+.toggle__input:checked ~ .toggle-green-400 {
+  background-color: #2ed573 !important;
+}
+
 .b-green-700 {
   background-color: #079992 !important;
 }
@@ -9795,6 +9992,10 @@ body {
 
 .hover-c-green-700:hover {
   color: #079992 !important;
+}
+
+.toggle__input:checked ~ .toggle-green-700 {
+  background-color: #079992 !important;
 }
 
 .b-red-100 {
@@ -9817,6 +10018,10 @@ body {
   color: #ec8385 !important;
 }
 
+.toggle__input:checked ~ .toggle-red-100 {
+  background-color: #ec8385 !important;
+}
+
 .b-red-200 {
   background-color: #e66063 !important;
 }
@@ -9835,6 +10040,10 @@ body {
 
 .hover-c-red-200:hover {
   color: #e66063 !important;
+}
+
+.toggle__input:checked ~ .toggle-red-200 {
+  background-color: #e66063 !important;
 }
 
 .b-red-300 {
@@ -9857,6 +10066,10 @@ body {
   color: #e35053 !important;
 }
 
+.toggle__input:checked ~ .toggle-red-300 {
+  background-color: #e35053 !important;
+}
+
 .b-red-400 {
   background-color: #dd2c2f !important;
 }
@@ -9875,6 +10088,10 @@ body {
 
 .hover-c-red-400:hover {
   color: #dd2c2f !important;
+}
+
+.toggle__input:checked ~ .toggle-red-400 {
+  background-color: #dd2c2f !important;
 }
 
 .b-red-700 {
@@ -9897,6 +10114,10 @@ body {
   color: #b33939 !important;
 }
 
+.toggle__input:checked ~ .toggle-red-700 {
+  background-color: #b33939 !important;
+}
+
 .b-orange-100 {
   background-color: #FFF1F0 !important;
 }
@@ -9915,6 +10136,10 @@ body {
 
 .hover-c-orange-100:hover {
   color: #FFF1F0 !important;
+}
+
+.toggle__input:checked ~ .toggle-orange-100 {
+  background-color: #FFF1F0 !important;
 }
 
 .b-orange-400 {
@@ -9937,6 +10162,10 @@ body {
   color: #e74c3c !important;
 }
 
+.toggle__input:checked ~ .toggle-orange-400 {
+  background-color: #e74c3c !important;
+}
+
 .b-orange-500 {
   background-color: #E43725 !important;
 }
@@ -9955,6 +10184,10 @@ body {
 
 .hover-c-orange-500:hover {
   color: #E43725 !important;
+}
+
+.toggle__input:checked ~ .toggle-orange-500 {
+  background-color: #E43725 !important;
 }
 
 .b-gray-100 {
@@ -9977,6 +10210,10 @@ body {
   color: #f0f0f0 !important;
 }
 
+.toggle__input:checked ~ .toggle-gray-100 {
+  background-color: #f0f0f0 !important;
+}
+
 .b-gray-200 {
   background-color: #d9d9d9 !important;
 }
@@ -9995,6 +10232,10 @@ body {
 
 .hover-c-gray-200:hover {
   color: #d9d9d9 !important;
+}
+
+.toggle__input:checked ~ .toggle-gray-200 {
+  background-color: #d9d9d9 !important;
 }
 
 .b-gray-300 {
@@ -10017,6 +10258,10 @@ body {
   color: #b5b5b5 !important;
 }
 
+.toggle__input:checked ~ .toggle-gray-300 {
+  background-color: #b5b5b5 !important;
+}
+
 .b-gray-500 {
   background-color: #3b3b3b !important;
 }
@@ -10035,6 +10280,10 @@ body {
 
 .hover-c-gray-500:hover {
   color: #3b3b3b !important;
+}
+
+.toggle__input:checked ~ .toggle-gray-500 {
+  background-color: #3b3b3b !important;
 }
 
 .b-gray-700 {
@@ -10057,6 +10306,10 @@ body {
   color: #1c1c1c !important;
 }
 
+.toggle__input:checked ~ .toggle-gray-700 {
+  background-color: #1c1c1c !important;
+}
+
 .b-gray-900 {
   background-color: #0c0c0c !important;
 }
@@ -10075,6 +10328,10 @@ body {
 
 .hover-c-gray-900:hover {
   color: #0c0c0c !important;
+}
+
+.toggle__input:checked ~ .toggle-gray-900 {
+  background-color: #0c0c0c !important;
 }
 
 .b-pink-200 {
@@ -10097,6 +10354,10 @@ body {
   color: #f8a5c2 !important;
 }
 
+.toggle__input:checked ~ .toggle-pink-200 {
+  background-color: #f8a5c2 !important;
+}
+
 .b-pink-400 {
   background-color: #f78fb3 !important;
 }
@@ -10115,6 +10376,10 @@ body {
 
 .hover-c-pink-400:hover {
   color: #f78fb3 !important;
+}
+
+.toggle__input:checked ~ .toggle-pink-400 {
+  background-color: #f78fb3 !important;
 }
 
 .b-pink-700 {
@@ -10137,6 +10402,10 @@ body {
   color: #f368e0 !important;
 }
 
+.toggle__input:checked ~ .toggle-pink-700 {
+  background-color: #f368e0 !important;
+}
+
 .b-purple-200 {
   background-color: #B2A0FF !important;
 }
@@ -10155,6 +10424,10 @@ body {
 
 .hover-c-purple-200:hover {
   color: #B2A0FF !important;
+}
+
+.toggle__input:checked ~ .toggle-purple-200 {
+  background-color: #B2A0FF !important;
 }
 
 .b-purple-400 {
@@ -10177,6 +10450,10 @@ body {
   color: #8A6FFF !important;
 }
 
+.toggle__input:checked ~ .toggle-purple-400 {
+  background-color: #8A6FFF !important;
+}
+
 .b-purple-700 {
   background-color: #6937ff !important;
 }
@@ -10195,6 +10472,10 @@ body {
 
 .hover-c-purple-700:hover {
   color: #6937ff !important;
+}
+
+.toggle__input:checked ~ .toggle-purple-700 {
+  background-color: #6937ff !important;
 }
 
 .b-black {
@@ -10217,6 +10498,10 @@ body {
   color: #000 !important;
 }
 
+.toggle__input:checked ~ .toggle-black {
+  background-color: #000 !important;
+}
+
 .b-white {
   background-color: #fff !important;
 }
@@ -10235,6 +10520,10 @@ body {
 
 .hover-c-white:hover {
   color: #fff !important;
+}
+
+.toggle__input:checked ~ .toggle-white {
+  background-color: #fff !important;
 }
 
 @media screen and (max-width: 1520px) {

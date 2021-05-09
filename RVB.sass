@@ -4,6 +4,7 @@
 @import classes/other/fonts
 @import classes/elements/cards
 @import classes/elements/form
+@import classes/other/gradients
 *
     box-sizing: border-box
     margin: 0
@@ -72,6 +73,14 @@ body
         opacity: #{$i}% !important
 .border-r-circle
     border-radius: 50% !important
+.border-r-r-circle
+    border-radius: 0 1000px 1000px 0 !important
+.border-r-l-circle
+    border-radius: 1000px 0 0 1000px !important
+.border-r-t-circle
+    border-radius: 1000px 1000px 0 0 !important
+.border-r-b-circle
+    border-radius: 0 0 1000px 1000px !important
 @for $i from 0 through $hover-max
     .hover-#{$i}
         transition: background-color #{$i*0.2}s ease, color #{$i*0.2}s ease

@@ -1,3 +1,5 @@
+.link
+    text-decoration: none
 .button
     box-sizing: border-box
     text-decoration: none
@@ -28,3 +30,62 @@
     -webkit-appearance: none
 .text-input:focus
     outline: none
+
+.dropdown
+    display: inline-block
+
+.dropdown>ul
+    display: none
+    background: white
+    width: 200px
+.dropdown:hover  > ul
+    position: absolute
+    display: flex
+    border-radius: 5px
+    box-shadow: 1px 1px 5px rgba(12, 12, 12, 0.1) !important
+.dropdown ul li
+    display: flex
+    flex-direction: column
+    gap: 15px
+    width: 100%
+    list-style: none
+    padding: 15px
+    text-align: left
+
+.dropdown ul li a
+    text-decoration: none
+    color: gray
+
+.toggle
+    --width: 40px
+    --height: calc(var(--width) / 2)
+    --border-radius: calc(var(--height) / 2)
+
+    display: inline-block
+    cursor: pointer
+
+    &__input
+        display: none
+
+    &__fill
+        position: relative
+        width: var(--width)
+        height: var(--height)
+        border-radius: var(--border-radius)
+        background: #dddddd
+        transition: background 0.2s
+
+    &__fill::after
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        height: var(--height)
+        width: var(--height)
+        background: #ffffff
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.25)
+        border-radius: var(--border-radius)
+        transition: transform 0.2s
+
+    &__input:checked~.toggle__fill::after
+        transform: translateX(var(--height))

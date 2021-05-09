@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="RVB.css">
+    <link rel="stylesheet" href="Hermes/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <title>HR by ReinVB</title>
+</head>
+
+<body class="b-back-blue">
+
+    <div class="box w-100 border-r-0 b-gray-700 c-white font-source-sans-pro">
+        <div class="container w-70">
+            <div class="row pd-v-4">
+                <div class="col-3">
+                    <img src="images/HR.png" alt="" class="hr-logo">
+                </div>
+                <div class="col-9 t-right pd-r-0">
+                    <a href="" class="button button-m b-none t-8 pd-t-3 fw-600 c-white">HOME</a>
+                    <div class="dropdown">
+                        <a href="" class="button button-m b-none t-8 pd-t-3 fw-600 c-white">JOB & INTERSHIP FAIR <i
+                                class="fas fa-caret-down pd-l-2"></i></a>
+                        <ul>
+                            <li>
+                                <a href="">JOBS</a>
+                                <a href="">INTERSHIP FAIR</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="" class="button button-m b-none t-8 pd-t-3 fw-600 c-white">JOBS</a>
+                    <a href="" class="button button-m b-none t-8 pd-t-3 fw-600 c-white">INTERSHIPS</a>
+                    <a href="" class="button button-m b-none t-8 pd-t-3 fw-600 c-white">COMPANIES</a>
+                    <a href="" class="button button-m b-none t-8 pd-t-3 fw-600 c-white">ABOUT US</a>
+                    <a href="" class="button button-m b-none t-8 pd-t-3 fw-600 c-white mr-l-10 pd-r-0 mr-r-0">LOGIN</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container w-70 mr-t-10 font-source-sans-pro">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-8 pd-l-10">
+                <h1 class="c-gray-700 fw-100">Companies</h1>
+            </div>
+        </div>
+        <div class="row mr-t-3">
+            <div class="col-4">
+                <div class="box">
+                    <form action="hermes.html">
+                        <p class="c-gray-700 fw-700 pd-v-3">FILTER / SEARCH</p>
+                        <input name="search" type="text" class="text-input border-gray-100 c-blue-400"
+                            placeholder="search...">
+                        <p class="c-gray-700 fw-700 pd-v-2">FIELD</p>
+
+                        <div class="directorist-select directorist-select-multi font-source-sans-pro" id="multiSelect"
+                            data-isSearch="true" data-max="5"
+                            data-multiSelect="['Computer science', 'Electromechanics', 'Chemistry', 'Structural engineering', 'Automation', 'Land surveyor', 'Electronical-ICT', 'Electrotechnics']">
+                            <input type="hidden" name="options">
+                        </div>
+
+                        <!--
+                    <form action="" class="relative">
+                        <label class="toggle pd-t-2" for="myToggle">
+                            <input class="toggle__input" name="" type="checkbox" id="myToggle">
+                            <div class="toggle__fill toggle-blue-400"></div>
+
+                        </label>
+                        <span class="pd-l-5" style="line-height: -10px;">Computer science
+                        </span><br>
+
+                        <label class="toggle pd-t-4" for="myToggle2">
+                            <input class="toggle__input" name="" type="checkbox" id="myToggle2">
+                            <div class="toggle__fill toggle-blue-400"></div>
+
+                        </label>
+                        <span class="pd-l-5" style="line-height: -10px;">Electromechanics
+                        </span><br>
+
+                        <label class="toggle pd-t-4" for="myToggle2">
+                            <input class="toggle__input" name="" type="checkbox" id="myToggle2">
+                            <div class="toggle__fill"></div>
+
+                        </label>
+                        <span class="pd-l-5" style="line-height: -10px;">Chemistry
+                        </span><br>
+
+                        <label class="toggle pd-t-4" for="myToggle2">
+                            <input class="toggle__input" name="" type="checkbox" id="myToggle2">
+                            <div class="toggle__fill"></div>
+
+                        </label>
+                        <span class="pd-l-5" style="line-height: -10px;">
+                            Structural engineering
+                        </span><br>
+
+                        <label class="toggle pd-t-4" for="myToggle2">
+                            <input class="toggle__input" name="" type="checkbox" id="myToggle2">
+                            <div class="toggle__fill"></div>
+
+                        </label>
+                        <span class="pd-l-5" style="line-height: -10px;">Automation
+                        </span><br>
+
+                        <label class="toggle pd-t-4" for="myToggle2">
+                            <input class="toggle__input" name="" type="checkbox" id="myToggle2">
+                            <div class="toggle__fill"></div>
+
+                        </label>
+                        <span class="pd-l-5" style="line-height: -10px;">
+                            Land surveyor
+
+                        </span><br>
+
+                        <label class="toggle pd-t-4" for="myToggle2">
+                            <input class="toggle__input" name="" type="checkbox" id="myToggle2">
+                            <div class="toggle__fill"></div>
+
+                        </label>
+                        <span class="pd-l-5" style="line-height: -10px;">
+                            Electronical-ICT
+
+                        </span><br>
+
+                        <label class="toggle pd-t-4" for="myToggle2">
+                            <input class="toggle__input" name="" type="checkbox" id="myToggle2">
+                            <div class="toggle__fill"></div>
+
+                        </label>
+                        <span class="pd-l-5" style="line-height: -10px;">
+                            Electrotechnics
+
+                        </span><br>
+                         -->
+                        <input type="submit" class="button button-m b-blue-400 c-white mr-v-5 fw-700" value="Search">
+
+
+                    </form>
+                </div>
+            </div>
+            <div class="col-8 pd-l-10">
+
+                <div class="box">
+                    <div class="row pd-v-5">
+                        <div class="col-3 pd-h-5">
+                            <img src="images/l1.png" class="logo_comp">
+                        </div>
+                        <div class="col-9 pd-l-10">
+                            <p class="fw-700 c-gray-700 t-9">
+                                Be-Mobile
+                            </p>
+                            <div class="pd-t-2 text_comp pd-r-10 c-gray-500">
+                                Founded in 2006 by CEO Jan Cools, Be-Mobile started collecting Floating Car Data to
+                                aggregate into real-time traffic information for automotive, navigation, tv, radio, apps
+                                and more. Today, Be-Mobile has become an all-round specialized smart mobility company
+                                offering a solution for every player in the mobility industry – from logistics
+                                companies, tolling operators, OEMs and government agencies to port authorities and
+                                parking operators.
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box mr-t-3">
+                    <div class="row pd-v-5">
+                        <div class="col-3 pd-h-5">
+                            <img src="images/l2.png" class="logo_comp">
+                        </div>
+                        <div class="col-9 pd-l-10">
+                            <p class="fw-700 c-gray-700 t-9">
+                                ABB-B.V.
+                            </p>
+                            <div class="pd-t-2 text_comp pd-r-10 c-gray-500">
+                                ABB is een technologieleider die de digitale transformatie van industrieën aanstuurt.
+                                Voortbouwend op een traditie van meer dan 130 jaar innovatie vervult ABB vandaag de dag
+                                een leidende rol voor digitale industrieën met vier klantgerichte wereldwijde
+                                businesses: Electrification, Industrial Automation, Motion en Robotics & Discrete
+                                Automation. De leidende rol op digitaal terrein is gefundeerd op het gemeenschappelijke
+                                digitale ABB Ability™ platform...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box mr-t-3">
+                    <div class="row pd-v-5">
+                        <div class="col-3 pd-h-5">
+                            <img src="images/l3.jpg" class="logo_comp">
+                        </div>
+                        <div class="col-9 pd-l-10">
+                            <p class="fw-700 c-gray-700 t-9">
+                                Agristo nv
+                            </p>
+                            <div class="pd-t-2 text_comp pd-r-10 c-gray-500">
+                                Al sinds 1986 brengen wij de authentieke smaken van frietjes, kroketjes en andere
+                                aardappelproducten op het bord van iedereen die kiest voor kwaliteit, smaak en
+                                gezelligheid. Bij Agristo draait alles rond heerlijke voorgebakken en diepgevroren
+                                aardappelproducten. Frietjes, puree, röstis, kroketjes, gratins,… noem maar op.
+
+                                En we maken ze ‘op maat’...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box mr-t-3">
+                    <div class="row pd-v-5">
+                        <div class="col-3 pd-h-5">
+                            <img src="images/l4.jpg" class="logo_comp">
+                        </div>
+                        <div class="col-9 pd-l-10">
+                            <p class="fw-700 c-gray-700 t-9">
+                                PSA Antwerp
+                            </p>
+                            <div class="pd-t-2 text_comp pd-r-10 c-gray-500">
+                                Bij PSA zorgen we er elke dag voor dat duizenden containers vlot op weg zijn naar hun
+                                bestemming. Met kennis van zaken, maar ook met ijzersterk teamwork doorheen de
+                                verschillende departementen. Hoewel we allemaal onze eigen expertise hebben, delen we
+                                bij dezelfde passie! Gezien PSA Antwerp continu groeit, zijn wij steeds op zoek naar
+                                gemotiveerde talenten.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .hr-logo {
+            width: 60px;
+        }
+
+        .logo_comp {
+            width: 100%;
+        }
+
+        .text_comp {
+            line-height: 20px;
+        }
+    </style>
+    <script src="Hermes/script.js"></script>
+    <script>
+        pureScriptSelect('#multiSelect');
+    </script>
+</body>
+
+</html>

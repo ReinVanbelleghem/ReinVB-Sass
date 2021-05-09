@@ -9,44 +9,42 @@
     <title>Sass by ReinVB</title>
 </head>
 
-<body class="b-paper">
-    <div class="b-white border-r-0">
-        <div class="container w-65">
+<body>
+    <div class="border-r-0 topsection">
+        <div class="container w-60">
             <div class="row pd-v-4">
-                <div class="col-3 fw-700 c-orange-400 pd-t-3">
+                <div class="col-3 fw-700 c-white pd-t-3">
                     ReinVB
                 </div>
                 <div class="col-9 t-right">
-                    <div class="button button-m c-gray-300 hover-0 hover-c-orange-400">Home</div>
-                    <div class="button button-m c-gray-300 hover-0 hover-c-orange-400">About</div>
-                    <div class="button button-m c-gray-300 hover-0 hover-c-orange-400">Info</div>
-                    <div class="button button-m c-gray-300 hover-0 hover-c-orange-400">Contact</div>
+                    <a href="" class="button button-m c-white">Home</a>
+                    <a href="" class="button button-m c-white">About</a>
+                    <a href="" class="button button-m c-white">Portfolio</a>
+                    <a href="" class="button button-m c-white">Contact</a>
                 </div>
             </div>
+            <h1 class="fw-700 t-center c-white mr-t-20 t-30">ABOUT ME</h1>
         </div>
     </div>
-    <div class="container w-65">
-        <div class="row mr-t-10">
-            <div class="col-6 pd-r-2">
-                <div class="card card-v box-shadow-2">
-                    <img src="images/1.jpg" class="card-image border-r-t-8"></img>
-                    <div class="card-text border-r-b-8">
-                        Learn more about this picture?<br>
-                        <a href="" class="button button-m b-orange-400 c-white fw-700 mr-t-5">Click me</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 pd-l-2">
-                <div class="card card-v box-shadow-2">
-                    <img src="images/3.jpg" class="card-image border-r-t-8"></img>
-                    <div class="card-text border-r-b-8">
-                        Learn more about this picture?<br>
-                        <a href="" class="button button-m b-orange-400 c-white fw-700 mr-t-5">Click me</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="container w-60 bottomsec">
+        <img src="images/svg/webdev.svg" alt="">
     </div>
-</body>
+    <style>
+        .topsection {
+            background-image: url("images/svg/bg.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        .bottomsec {
+            margin-top: -500px;
+        }
+
+        .bottomsec img {
+            margin-top: 10px;
+            width: 400px;
+        }
+    </style>
 
 </html>
