@@ -6,29 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="RVB.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+        integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+        crossorigin="anonymous"></script>
+
     <title>Test</title>
 </head>
 
-<body class="b-paper">
+<body class="b-blue-900-94">
 
     <div class="container w-70 mr-t-10">
-        <div class="dropdown">
-            <button class="button button-m b-blue-700 c-white">Products</button>
-
-            <ul>
-                <li>
-                    <a href="">Item</a>
-                    <a href="">Item</a>
-                    <a href="">Item</a>
-                    <a href="">Item</a>
-                    <a href="">Item</a>
-                </li>
-            </ul>
+        <div class="box b-black-40 c-white pd-5 fw-700 notification">
+            ! error this is a long error message lets test how this works haha.
         </div>
-        <br>
-        other content
+        <button id="trigger" class="button button-m b-blue-400-30 c-blue-400 fw-700">SHOW</button>
+
+        <div class="row mr-t-10">
+            <div class="col-2">
+                <div class="box b-blue-900 c-white pd-8 pd-h-4">
+                    <button
+                        class="button button-s b-orange-400-30 c-orange-400 t-10 fw-700 hover hover-2 hover-b-blue-400-30 hover-c-blue-400">TEST</button>
+                    <button class="button button-s b-blue-400-30 c-blue-400 t-10 fw-700">UPDATE</button>
+                    <button class="button button-s b-green-400-30 c-green-400 t-10 fw-700">DELETE</button>
+                    <button class="button button-s b-purple-400-30 c-purple-400 t-10 fw-700">ADD</button>
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>
+<script>
+    var timeoutHandler = null;
+    $("#trigger").click(function () {
+        console.log("sup")
+        $(".notification").addClass('noti_show');
+        if (timeoutHandler) clearTimeout(timeoutHandler);
+
+        timeoutHandler = setTimeout(function () {
+            $(".notification").removeClass('noti_show');
+
+        }, 4000);
+    });
+</script>
 
 </html>

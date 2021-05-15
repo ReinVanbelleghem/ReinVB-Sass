@@ -11,3 +11,18 @@
         color: $color !important
     .toggle__input:checked~.toggle-#{$name}
         background-color: $color !important
+
+@each $name, $color in $colors
+    @for $i from 0 through 100
+        .b-#{$name}-#{$i}
+            background-color: rgba($color, calc(#{$i}/100)) !important
+        .c-#{$name}-#{$i}
+            color: rgba($color, calc(#{$i}/100)) !important
+        .border-#{$name}-#{$i}
+            border: 1px solid rgba($color, calc(#{$i}/100))
+        .hover-b-#{$name}-#{$i}:hover
+            background-color: rgba($color, calc(#{$i}/100)) !important
+        .hover-c-#{$name}-#{$i}:hover
+            color: rgba($color, calc(#{$i}/100)) !important
+        .toggle__input:checked~.toggle-#{$name}-#{$i}
+            background-color: rgba($color, calc(#{$i}/100)) !important

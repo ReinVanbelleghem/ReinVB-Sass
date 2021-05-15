@@ -54,6 +54,21 @@ body
     position: absolute
 .link
     text-decoration: none
+.hide
+    display: none
+.notification
+    visibility: hidden
+    opacity: 0
+    position: fixed
+    top: 10px
+    right: 10px
+    width: 300px
+    transition: visibility 0.3s, opacity 0.3s ease
+
+.noti_show
+    opacity: 1
+    visibility: visible
+
 @for $i from 0 through $b-r-max
     .border-r-#{$i}
         border-radius: #{$i}px !important
@@ -65,12 +80,22 @@ body
         border-radius: #{$i}px #{$i}px 0px 0px
     .border-r-b-#{$i}
         border-radius: 0px 0px #{$i}px #{$i}px
+    .border-r-tl-#{$i}
+        border-top-left-radius: #{$i}px !important
+    .border-r-tr-#{$i}
+        border-top-right-radius: #{$i}px !important
+    .border-r-bl-#{$i}
+        border-bottom-left-radius: #{$i}px !important
+    .border-r-br-#{$i}
+        border-bottom-right-radius: #{$i}px !important
 @for $i from 0 through $border-thickness
     .border-t-#{$i}
         border-width: #{$i}px !important
 @for $i from 0 through 100
     .opacity-#{$i}
         opacity: #{$i}% !important
+.t-opacity-none
+    opacity: 100%
 .border-r-circle
     border-radius: 50% !important
 .border-r-r-circle
