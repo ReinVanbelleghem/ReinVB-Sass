@@ -93,9 +93,7 @@ body
         border-width: #{$i}px !important
 @for $i from 0 through 100
     .opacity-#{$i}
-        opacity: #{$i}% !important
-.t-opacity-none
-    opacity: 100%
+        opacity: percentage($i/100)
 .border-r-circle
     border-radius: 50% !important
 .border-r-r-circle
